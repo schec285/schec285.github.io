@@ -3,36 +3,61 @@ import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 
 const projects = [
-  {
-    title: "ラーメンブログ",
-    tech: "Laravel",
-    link: "./ramen-blog"
-  },
-  {
-    title: "バンド予約サイト",
-    tech: "Next.js",
-    link: "./band-reservation"
-  }
+    {
+        title: "ラーメンブログ",
+        tech: "Laravel",
+        link: "./ramen-blog",
+    },
+    {
+        title: "バンド予約サイト",
+        tech: "Next.js",
+        link: "./band-reservation",
+    },
 ];
 ---
 
 <Layout title="ホーム">
-    <section class="">
-        <h1 class="text-4xl font-bold">
-            むむむの日常
-        </h1>
-
-        <p class="mt-4 text-slate-600 dark:text-slate-400">
+    <div class="text-center">
+        <h1 class="text-4xl font-bold">schec285の部屋</h1>
+    </div>
+    <section>
+        <div
+            class="mx-auto mt-6 h-48 w-48 rounded-full border-4 border-slate-300 bg-slate-100 object-cover p-2 shadow-lg dark:border-slate-500 dark:bg-slate-600"
+        >
+            <img src="/schec285_icon_v1.svg" alt="schec285のアイコン" />
+        </div>
+        <a
+            href="https://github.com/schec285"
+            target="_blank"
+            rel="noreferrer"
+            class="mx-auto mt-4 flex w-fit items-center gap-2 rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800"
+        >
+            <svg
+                class="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+            >
+                <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.51.47-3.16-.63-3.36-1.21-.11-.3-.6-1.21-1.03-1.46-.35-.19-.85-.66-.01-.67.79-.01 1.35.75 1.54 1.06.9 1.55 2.34 1.11 2.91.85.09-.67.35-1.11.64-1.37-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.28 9.28 0 0 1 12 6.98c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.06.36.32.68.93.68 1.88 0 1.36-.01 2.45-.01 2.79 0 .27.18.59.69.49A10.06 10.06 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"
+                ></path>
+            </svg>
+        </a>
+    </section>
+    <section>
+        <h2 class="mt-4 text-slate-600 dark:text-slate-400">
             個人開発・学習で作成したアプリケーションです。
-        </p>
+        </h2>
         <div class="mt-6 grid gap-4">
             {
-                projects.map(project => (
-                <ProjectCard
-                    title={project.title}
-                    tech={project.tech}
-                    link={project.link}
-                />
+                projects.map((project) => (
+                    <ProjectCard
+                        title={project.title}
+                        tech={project.tech}
+                        link={project.link}
+                    />
                 ))
             }
         </div>
