@@ -1,0 +1,19 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  link: string;
+  icon: string;
+}
+
+const { link, icon } = Astro.props;
+---
+
+<a
+  href={link}
+  target="_blank"
+  rel="noreferrer"
+  class="hover:bg-slate-100 rounded-full transition p-2 dark:hover:bg-slate-800"
+>
+  <Icon name={icon} class="w-8 h-8" />
+</a>
